@@ -35,7 +35,7 @@ public class BookTests {
 
     @Test
     public void BookAuthorComparator() {
-        Book b1 = new Book("A", "B");
+        Book b1 = new Book("A", "a");
         Book b2 = new Book("B", "Al");
         Book b3 = new Book("A", "Yu");
 
@@ -49,7 +49,7 @@ public class BookTests {
         expected.add(b3);
         expected.add(b2);
 
-        actual.sort(new BookAuthorComparator());
+        actual.sort(new BookAuthorComparator(true));
 
         assertEquals(expected, actual);
     }
