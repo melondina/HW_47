@@ -7,6 +7,12 @@ public class Book {
     public Book(String author, String title) {
         this.author = author;
         this.title = title;
+        if (author == " " || author == "") {
+            throw new IllegalArgumentException("There is no author");
+        }
+        if (title == " " || title == "") {
+            throw new IllegalArgumentException("There is no title");
+        }
     }
 
     public String getAuthor() {
